@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Box Example</title>
+</head>
+<body>
+
+   <form method="post" action="/search">
+    {% csrf_token %}
+    <label for="search_query">Search:</label>
+    <input type="text" id="search_query" name="search_query" placeholder="Enter your search query">
+    <input type="submit" value="Search">
+</form>
+
+</body>
+</html>
