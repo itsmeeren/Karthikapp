@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock title %} | karthiks hack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1702594369985-163331c12097?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: gradientBG 15s infinite alternate;
+            min-height: 100%;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar-brand {
+            color: #fff; /* White text for the brand */
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff; /* White text for nav links */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa; /* Hover color for nav links */
+        }
+
+        /* Information content styling */
+        .info-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff; /* White text for information content */
+            z-index: 1000;
+        }
+
+        .info-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .info-content p {
+            font-size: 1.5em;
+        }
+
+        /* LinkedIn icon styling */
+        .linkedin-link {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-80%); /* Adjust the percentage as needed */
+            text-decoration: none;
+            color: #0077b5;
+            display: flex;
+            align-items: center;
+            z-index: 1000; /* Set a higher z-index value to make sure it's on top */
+        }
+
+        .linkedin-link img {
+            width: 60px; /* Adjust the size as needed */
+            height: 60px; /* Adjust the size as needed */
+            margin-right: 10px;
+        }
+
+        /* Instagram icon styling */
+        .instagram-link {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(80%); /* Adjust the percentage as needed */
+            text-decoration: none;
+            color: #bc2a8d;
+            display: flex;
+            align-items: center;
+            z-index: 1000; /* Set a higher z-index value to make sure it's on top */
+        }
+
+        .instagram-link img {
+            width: 60px; /* Adjust the size as needed */
+            height: 60px; /* Adjust the size as needed */
+            margin-right: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Neat information content */
+        .info-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1000;
+        }
+
+        .info-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .info-content p {
+            font-size: 1.5em;
+        }
+
+        /* Upload Content styling */
+        .nav-item.upload-content a {
+            color: #fff !important; /* White text for Upload Content */
+        }
+
+        /* Spying message styling */
+        .spying-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: red;
+            animation: spyingAnimation 2s infinite;
+        }
+
+        @keyframes spyingAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/spoofing">Ryzen_Kubernetes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item upload-content">
+                    <a class="nav-link active" aria-current="page" href="/ip">Upload Content</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mac">Images</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/randommac">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/help">Request</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="spying-message">Ryzen is spying...</div>
+</nav>
+{% block body %}
+<!-- Neat information content -->
+<div class="info-content">
+    <h1>Your Name</h1>
+    <p>Web Developer | Designer | Enthusiast</p>
+</div>
+{% endblock body %}
+
+<!-- LinkedIn icon -->
+<a class="linkedin-link" href="https://www.linkedin.com/in/karthik-mn-669566259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+    <img src="https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGlua2VkJTIwaW58ZW58MHx8MHx8fDA%3D" alt="LinkedIn">
+</a>
+
+<!-- Instagram icon -->
+<a class="instagram-link" href="https://instagram.com/karthik__m_n?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+    <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGlua2VkJTIwaW4lMjBpY29ufGVufDB8fDB8fHww" alt="Instagram">
+</a>
+
+</body>
+</html>

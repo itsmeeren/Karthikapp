@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .search-form-container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 50px; /* Adjust as needed */
+        }
+
+        .search-form {
+            width: 80%; /* Adjust the width as needed */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #search_image {
+            width: 100%; /* Make the search input full-width */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Background Image Animation */
+        body::after {
+            content: "";
+            background: url('https://images.unsplash.com/photo-1519575706483-221027bfbb31?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhhY2tlcnxlbnwwfHwwfHx8MA%3D%3D') center/cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: bgAnimation 10s infinite alternate;
+        }
+
+        @keyframes bgAnimation {
+            0% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <title>{% block title %}Edith Images{% endblock %}</title>
+</head>
+<body>
+    <div class="search-form-container">
+        <form method="post" action="{% url 'search_image' %}" class="search-form">
+            {% csrf_token %}
+            <label for="search_image">Search:</label>
+            <input type="text" id="search_image" name="search_image" placeholder="Type here">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</body>
+</html>

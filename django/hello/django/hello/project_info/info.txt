@@ -1,0 +1,3 @@
+we can use automated testing for the models we are gonna create
+
+fro creating every test case for the each models increases the betterness of the function which has to be written

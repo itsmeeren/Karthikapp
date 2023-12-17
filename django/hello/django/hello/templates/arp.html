@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}
+arp{% endblock title %}
+{% block body %}
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-image: url('https://plus.unsplash.com/premium_photo-1661833879387-1513bf753554?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWJvdXQlMjBtZXxlbnwwfHwwfHx8MA%3D%3D');
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1, h2, p {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Make the font inside section more bold */
+    section h1, section h2, section p {
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: left;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+
+  <header>
+    <h1>Karthik MN</h1>
+    <p>Your Tagline or Description</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hi iam karthik.</p>
+
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:karthikmn199@gmail.com">karthikmn199@email.com</a></p>
+    <p>Phone: +91 9113209285</p>
+
+    <h2>My Projects</h2>
+    <ul>
+      <li><a href="#">ARP hacking</a></li>
+      <li><a href="#">Python </a></li>
+
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2023 Karthik's Hack. All rights reserved.
+  </footer>
+
+{% endblock body %}
